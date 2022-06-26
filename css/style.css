@@ -7,7 +7,7 @@
 }
 
 body {
-    /* width: 1600px; */
+    width: 1600px;
     margin: 0;
     background-color: var(--primary-bgc);
     color: var(--primary-text-color);
@@ -36,10 +36,14 @@ h3 {
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    margin-left: 215px;
-    margin-right: 215px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: 215px;
+    margin-right: 215px; */
+}
+
+.header {
+    border: 1px solid #ECECEC;
 }
 /* logo */
 
@@ -61,6 +65,7 @@ h3 {
 .nav {
     display: flex;
     align-items: center;
+    
 }
 
 .nav-list {
@@ -113,8 +118,8 @@ h3 {
 /* hero */
 
 .hero {
-    margin-top: 200px;
-    margin-bottom: 200px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 .hero-title {
@@ -137,8 +142,12 @@ h3 {
 
 .button {
     border-radius: 4px;
-    padding: 0;
     border: transparent;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    
 
     color: var(--primary-text-color);
     background-color: var(--button-color);
@@ -150,32 +159,10 @@ h3 {
     text-align: center;  
 }
 
-.button.primery {
-    width: 73px;
-    margin-right: 8px;
-    background-color: var(--accent-color);
+.button:hover,
+.button:focus {
     color: var(--primary-bgc);
-    font-family: Roboto, sans-serif;
-}
-
-.button.web {
-    width: 128px;
-}
-
-.button.add {
-    width: 145px;
-}
-
-.button.design {
-    width: 103px;
-}
-
-.button.marketing {
-    width: 130px;
-}
-.button.primery:hover,
-.button.primery:focus {
-    color: var(--accent-color);
+    background-color: var(--accent-color);
     }
 
 .button.index {
@@ -206,12 +193,21 @@ h3 {
 .portfolio {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-left: 280px;
     margin-bottom: 50px;
 }
 
-.portfolio .item:nth-child(n+3){
-    margin-left: 50px;
+.portfolio .item + .item {
+    margin-left: 8px;
+}
+
+.offers {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
 }
 .section {
     text-align: center;
@@ -221,6 +217,7 @@ h3 {
 
 .section-title {
     padding-bottom: 0;
+    padding-top: 94px;
 }
 
 .section .title {
@@ -339,13 +336,16 @@ h3 {
 /* footer */
 .footer {
     padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .adress {
    margin-top: 20px;
-   margin-bottom: 60px;
 }
 
+.adress .item + .item {
+    margin-top: 9px;
+}
 .footer-adress {
     color: var(--primary-bgc);
     font-style: normal;
@@ -355,7 +355,6 @@ h3 {
 }
 
 .footer-contact {
-    padding-top: 9px;
     color: var(--primary-bgc);
     font-style: normal;
     font-weight: 400;
